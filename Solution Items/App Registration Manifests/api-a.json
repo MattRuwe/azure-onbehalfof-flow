@@ -1,0 +1,98 @@
+{
+	"id": "75f84de7-3114-455f-afcc-153f29f2b266",
+	"acceptMappedClaims": null,
+	"accessTokenAcceptedVersion": 2,
+	"addIns": [],
+	"allowPublicClient": null,
+	"appId": "a1463aa0-761d-4227-8e87-xxxxxxxxxxxx",
+	"appRoles": [],
+	"oauth2AllowUrlPathMatching": false,
+	"createdDateTime": "2023-07-24T13:27:47Z",
+	"description": null,
+	"certification": null,
+	"disabledByMicrosoftStatus": null,
+	"groupMembershipClaims": null,
+	"identifierUris": [
+		"api://a1463aa0-761d-4227-8e87-xxxxxxxxxxxx"
+	],
+	"informationalUrls": {
+		"termsOfService": null,
+		"support": null,
+		"privacy": null,
+		"marketing": null
+	},
+	"keyCredentials": [],
+	"knownClientApplications": [],
+	"logoUrl": null,
+	"logoutUrl": null,
+	"name": "api-a",
+	"notes": null,
+	"oauth2AllowIdTokenImplicitFlow": true,
+	"oauth2AllowImplicitFlow": true,
+	"oauth2Permissions": [
+		{
+			"adminConsentDescription": "user_impersonation",
+			"adminConsentDisplayName": "user_impersonation",
+			"id": "1317dacb-5d0a-4f4d-a8a5-1a95a9c06ea9",
+			"isEnabled": true,
+			"lang": null,
+			"origin": "Application",
+			"type": "Admin",
+			"userConsentDescription": "user_impersonation",
+			"userConsentDisplayName": "user_impersonation",
+			"value": "user_impersonation"
+		}
+	],
+	"oauth2RequirePostResponse": false,
+	"optionalClaims": null,
+	"orgRestrictions": [],
+	"parentalControlSettings": {
+		"countriesBlockedForMinors": [],
+		"legalAgeGroupRule": "Allow"
+	},
+	"passwordCredentials": [
+		{
+			"customKeyIdentifier": null,
+			"endDate": "2024-01-20T14:30:35.923Z",
+			"keyId": "647800cd-bae7-4318-8388-c77640b5f842",
+			"startDate": "2023-07-24T13:30:35.923Z",
+			"value": null,
+			"createdOn": "2023-07-24T13:30:44.4737779Z",
+			"hint": "-pg",
+			"displayName": "api-b"
+		}
+	],
+	"preAuthorizedApplications": [],
+	"publisherDomain": "KiewitMattRuwe.onmicrosoft.com",
+	"replyUrlsWithType": [
+		{
+			"url": "http://localhost:5164",
+			"type": "Web"
+		}
+	],
+	"requiredResourceAccess": [
+		{
+			"resourceAppId": "a251cf10-30ff-4b76-81a1-xxxxxxxxxxxx",
+			"resourceAccess": [
+				{
+					"id": "e232b36b-c968-4e7c-8fc3-8d76e69ee9ae",
+					"type": "Scope"
+				}
+			]
+		},
+		{
+			"resourceAppId": "00000003-0000-0000-c000-000000000000",
+			"resourceAccess": [
+				{
+					"id": "e1fe6dd8-ba31-4d61-89e7-88639da4683d",
+					"type": "Scope"
+				}
+			]
+		}
+	],
+	"samlMetadataUrl": null,
+	"signInUrl": null,
+	"signInAudience": "AzureADMyOrg",
+	"tags": [],
+	"tokenEncryptionKeyId": null
+}
