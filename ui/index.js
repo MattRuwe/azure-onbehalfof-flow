@@ -56,7 +56,7 @@ const loginRequest = {
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/resources-and-scopes.md
  */
 const tokenRequest = {
-    scopes: ["api://742bec59-5ad6-4c85-b043-416cf4c3bbc5/user_impersonation"], //API Scope
+    scopes: ["api://742bec59-5ad6-4c85-b043-xxxxxxxxxxxx/user_impersonation"], //API Scope
     forceRefresh: false // Set this to "true" to skip a cached token and go to the server to get a new token
 };
 
