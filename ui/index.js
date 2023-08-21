@@ -6,9 +6,9 @@
 const msalConfig = {
     auth: {
         // 'Application (client) ID' of app registration in Azure portal - this value is a GUID
-        clientId: "d4e8436b-e2cc-4646-a6b5-xxxxxxxxxxxx",
+        clientId: "d4e8436b-e2cc-4646-a6b5-101483335025",
         // Full directory URL, in the form of https://login.microsoftonline.com/a47078d6-821c-4b28-a3a5-efd2bfb61aed
-        authority: "https://login.microsoftonline.com/a47078d6-821c-4b28-a3a5-xxxxxxxxxxxx",
+        authority: "https://login.microsoftonline.com/a47078d6-821c-4b28-a3a5-efd2bfb61aed",
         // Full redirect URL, in form of http://localhost:3000
         redirectUri: "http://localhost:8080/",
     },
@@ -56,7 +56,7 @@ const loginRequest = {
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/resources-and-scopes.md
  */
 const tokenRequest = {
-    scopes: ["api://742bec59-5ad6-4c85-b043-xxxxxxxxxxxx/user_impersonation"], //API Scope
+    scopes: ["api://742bec59-5ad6-4c85-b043-416cf4c3bbc5/user_impersonation"], //API Scope
     forceRefresh: false // Set this to "true" to skip a cached token and go to the server to get a new token
 };
 
@@ -80,12 +80,17 @@ myMSALObj.handleRedirectPromise()
 
 async function showWelcomeMessage(username) {
     var uiToken = await getTokenRedirect(loginRequest);
-    document.getElementById("username").innerHTML = username;
+    document.getElementById("name").innerHTML = uiToken.account.idTokenClaims.name;
+    document.getElementById("username").innerHTML = uiToken.account.username;
+    document.getElementById("useroid").innerHTML = uiToken.account.idTokenClaims.oid;
+    document.getElementById("tenantId").innerHTML = uiToken.account.tenantId;
+    document.getElementById("issuer").innerHTML = uiToken.idTokenClaims.iss;
     var uiToken = await getTokenRedirect(loginRequest);
     document.getElementById("uiIDToken").innerHTML = uiToken.idToken;
     var apiToken = await getTokenRedirect(tokenRequest);
     document.getElementById("apiAccessToken").innerHTML = apiToken.accessToken;
     document.getElementById("tenantID").innerHTML = apiToken.tenantId;
+    
 
     var result = await fetch('http://localhost:5164/A', {
         method: 'GET',
