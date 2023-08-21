@@ -80,12 +80,17 @@ myMSALObj.handleRedirectPromise()
 
 async function showWelcomeMessage(username) {
     var uiToken = await getTokenRedirect(loginRequest);
-    document.getElementById("username").innerHTML = username;
+    document.getElementById("name").innerHTML = uiToken.account.idTokenClaims.name;
+    document.getElementById("username").innerHTML = uiToken.account.username;
+    document.getElementById("useroid").innerHTML = uiToken.account.idTokenClaims.oid;
+    document.getElementById("tenantId").innerHTML = uiToken.account.tenantId;
+    document.getElementById("issuer").innerHTML = uiToken.idTokenClaims.iss;
     var uiToken = await getTokenRedirect(loginRequest);
     document.getElementById("uiIDToken").innerHTML = uiToken.idToken;
     var apiToken = await getTokenRedirect(tokenRequest);
     document.getElementById("apiAccessToken").innerHTML = apiToken.accessToken;
     document.getElementById("tenantID").innerHTML = apiToken.tenantId;
+    
 
     var result = await fetch('http://localhost:5164/A', {
         method: 'GET',
