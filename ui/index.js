@@ -6,9 +6,9 @@
 const msalConfig = {
     auth: {
         // 'Application (client) ID' of app registration in Azure portal - this value is a GUID
-        clientId: "367b88da-655b-4200-84d8-xxxxxxxxxxxx",
-        // Full directory URL, in the form of https://login.microsoftonline.com/9b3ea83d-ef72-4f7e-bf5c-a1cd0b54dc65
-        authority: "https://login.microsoftonline.com/9b3ea83d-ef72-4f7e-bf5c-a1cd0b54dc65",
+        clientId: "d4e8436b-e2cc-4646-a6b5-xxxxxxxxxxxx",
+        // Full directory URL, in the form of https://login.microsoftonline.com/a47078d6-821c-4b28-a3a5-efd2bfb61aed
+        authority: "https://login.microsoftonline.com/a47078d6-821c-4b28-a3a5-xxxxxxxxxxxx",
         // Full redirect URL, in form of http://localhost:3000
         redirectUri: "http://localhost:8080/",
     },
@@ -56,7 +56,7 @@ const loginRequest = {
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/resources-and-scopes.md
  */
 const tokenRequest = {
-    scopes: ["api://f2b5bbbc-a345-444c-9ac3-xxxxxxxxxxxx/user_impersonation"], //API Scope
+    scopes: ["api://742bec59-5ad6-4c85-b043-xxxxxxxxxxxx/user_impersonation"], //API Scope
     forceRefresh: false // Set this to "true" to skip a cached token and go to the server to get a new token
 };
 
@@ -169,5 +169,3 @@ function getTokenRedirect(request) {
             }
         });
 }
-
-signIn();
