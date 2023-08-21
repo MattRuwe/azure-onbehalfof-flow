@@ -34,9 +34,9 @@ namespace ApiB
                     };
                 }, idOptions =>
                 {
-                    idOptions.ClientId = "a251cf10-30ff-4b76-81a1-xxxxxxxxxxxx";
-                    idOptions.Domain = "MyDomain.onmicrosoft.com";
-                    idOptions.TenantId = "9b3ea83d-ef72-4f7e-bf5c-xxxxxxxxxxxx";
+                    idOptions.ClientId = "4c6cdc5e-4438-4b05-9441-2b58cc153065";
+                    idOptions.Domain = "omaha.dev";
+                    idOptions.TenantId = "a47078d6-821c-4b28-a3a5-efd2bfb61aed";
                     idOptions.Instance = "https://login.microsoftonline.com/";
                    
                 });

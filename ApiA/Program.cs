@@ -30,19 +30,19 @@ namespace ApiA
                     
                 }, idOptions =>
                 {
-                    idOptions.ClientId = "a1463aa0-761d-4227-8e87-xxxxxxxxxxxx";
-                    idOptions.Domain = "MyDomain.onmicrosoft.com";
-                    idOptions.TenantId = "9b3ea83d-ef72-4f7e-bf5c-xxxxxxxxxxxx";
+                    idOptions.ClientId = "742bec59-5ad6-4c85-b043-416cf4c3bbc5";
+                    idOptions.Domain = "omaha.dev";
+                    idOptions.TenantId = "a47078d6-821c-4b28-a3a5-efd2bfb61aed";
                     idOptions.Instance = "https://login.microsoftonline.com/";
                 })
                 .EnableTokenAcquisitionToCallDownstreamApi(options =>
                 {
-                    options.ClientSecret = "-pg8Q~-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+                    options.ClientSecret = "6SE8Q~iUuFb5PRTVwzrFuw17MeP3Xt6Tl9nzPcJz";
                     options.EnablePiiLogging = true;
                 })
                 .AddDownstreamApi("ApiB", options =>
                 {
-                    options.Scopes = new[] { "api://a1463aa0-761d-4227-8e87-xxxxxxxxxxxx/user_impersonation" };
+                    options.Scopes = new[] { "api://4c6cdc5e-4438-4b05-9441-2b58cc153065/user_impersonation" };
                     options.BaseUrl = "http://localhost:5165/";
                 })
                 .AddInMemoryTokenCaches();
