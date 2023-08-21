@@ -43,7 +43,7 @@ namespace ApiA
                 .AddDownstreamApi("ApiB", options =>
                 {
                     options.Scopes = new[] { "api://4c6cdc5e-4438-4b05-9441-2b58cc153065/user_impersonation" };
-                    options.BaseUrl = "http://localhost:5165/";
+                    options.BaseUrl = "http://localhost:4000/";
                 })
                 .AddInMemoryTokenCaches();
 

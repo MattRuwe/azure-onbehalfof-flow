@@ -27,7 +27,7 @@ namespace ApiB
                         OnTokenValidated = ctx =>
                         {
                             var jwtSecurityToken = ctx.SecurityToken as JwtSecurityToken;
-                            var raw = jwtSecurityToken.RawData;
+                            var raw = jwtSecurityToken?.RawData;
                             return Task.CompletedTask;
                         }
                     };

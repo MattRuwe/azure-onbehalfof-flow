@@ -9,8 +9,8 @@ const msalConfig = {
         clientId: "d4e8436b-e2cc-4646-a6b5-101483335025",
         // Full directory URL, in the form of https://login.microsoftonline.com/a47078d6-821c-4b28-a3a5-efd2bfb61aed
         authority: "https://login.microsoftonline.com/a47078d6-821c-4b28-a3a5-efd2bfb61aed",
-        // Full redirect URL, in form of http://localhost:3000
-        redirectUri: "http://localhost:8080/",
+        // Full redirect URL, in form of http://localhost:2000
+        redirectUri: "http://localhost:2000/",
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
@@ -92,7 +92,7 @@ async function showWelcomeMessage(username) {
     document.getElementById("tenantID").innerHTML = apiToken.tenantId;
     
 
-    var result = await fetch('http://localhost:5164/A', {
+    var result = await fetch('http://localhost:3000/A', {
         method: 'GET',
         headers: new Headers({"Authorization": `Bearer ${apiToken.accessToken}`})
       });
