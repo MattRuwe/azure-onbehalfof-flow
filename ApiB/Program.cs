@@ -17,9 +17,8 @@ namespace ApiB
         {
 
             var builder = WebApplication.CreateBuilder(args);
-            IdentityModelEventSource.ShowPII = true;
-            // Add services to the container.
 
+            // Add services to the container.
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddMicrosoftIdentityWebApi(
                 jwtOptions =>
                 {
@@ -61,7 +60,7 @@ namespace ApiB
             app.UseAuthentication(); 
             
             app.MapControllers();
-
+            IdentityModelEventSource.ShowPII = true;
             app.Run();
         }
     }

@@ -19,9 +19,8 @@ namespace ApiA
         {
 
             var builder = WebApplication.CreateBuilder(args);
-            IdentityModelEventSource.ShowPII = true;
+            
             // Add services to the container.
-
             builder.Services
                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApi(
@@ -76,7 +75,7 @@ namespace ApiA
             app.UseAuthentication();
             app.UseCors();
             app.MapControllers();
-
+            IdentityModelEventSource.ShowPII = true;
             app.Run();
         }
     }
