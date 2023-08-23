@@ -81,7 +81,7 @@ $AuthResponse = Invoke-WebRequest -Uri "https://login.microsoftonline.com/$Tenan
 # Store the access token for later use
 $accessToken = $AuthResponse.access_token
 
-# Setup headers for future HTTP requests to MS Graph
+# Setup headers for HTTP requests to MS Graph
 $headers = @{
     "Content-Type"     = "application/json";
     "Authorization"    = "Bearer $accessToken";
