@@ -30,14 +30,14 @@ namespace ApiA
                     
                 }, idOptions =>
                 {
-                    idOptions.ClientId = "742bec59-5ad6-4c85-b043-xxxxxxxxxxxx";
+                    idOptions.ClientId = "742bec59-5ad6-4c85-b043-416cf4c3bbc5";
                     idOptions.Domain = "mydomain.onmicrosoft.com";
-                    idOptions.TenantId = "a47078d6-821c-4b28-a3a5-xxxxxxxxxxxx";
+                    idOptions.TenantId = "a47078d6-821c-4b28-a3a5-efd2bfb61aed";
                     idOptions.Instance = "https://login.microsoftonline.com/";
                 })
                 .EnableTokenAcquisitionToCallDownstreamApi(options =>
                 {
-                    options.ClientSecret = "6SE8Q~xxxxxxxxxxxx";
+                    options.ClientSecret = "RAN8Q~-F.Es2gRghFa_jPH2SIP8G1QaVCLa5zafX";
                     options.EnablePiiLogging = true;
                 })
                 .AddDownstreamApi("ApiB", options =>
