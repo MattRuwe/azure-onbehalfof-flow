@@ -14,7 +14,9 @@ namespace ApiB.Controllers
         [HttpGet()]
         public ActionResult<string> Get()
         {
-            return Ok(@"Hello, World!");
+            //Debug to checkout claims available
+            var name = $"{User?.Claims.SingleOrDefault(_ => _.Type == "name")?.Value} ({User?.Identity?.Name})";
+            return Ok($"Hello, {name ?? "world"}!");
         }
     }
 }
